@@ -11,7 +11,7 @@ def spam ():
 fileName = str(input())
 #fileName = "email.txt"
 
-file = open(fileName, 'r')
+file = open(fileName[:-1])
 content = file.readlines()
 
 regexList = ["-{5}beginmessage-{5}", \
