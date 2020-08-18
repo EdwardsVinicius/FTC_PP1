@@ -3,6 +3,9 @@ import re
 def match(regex, string):
     p = re.compile(regex)
     return p.search(string)
+def spam ():
+    print("spam")
+    exit()
 
 
 #fileName = str(input())
@@ -17,14 +20,27 @@ regexList = ["-{5}beginmessage-{5}", \
     "^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$", \
     "^(19|20)\d\d\.(0[1-9]|1[012])\.(0[1-9]|[12][0-9]|3[01]) (?:([01]?\d|2[0-3]):([0-5]?\d):)?([0-5]?\d)$", \
     "^(-{23})$"]
+spamwords = ["[^@]+@[^@]+\.[^@]+", "</?head>", "</?body>", "</?img>", "alt", "href", 
+"milionario", "emprestimo", "loteria", "banco", "heranca", "seguidor", "desconto"]
 
 
-for i in range(0, len(content)):
+for i in range(5):
     if match(regexList[i], content[i]):
         print("aceito", i)
     else:
+        spam()
         break
-    
+
+counter = 0
+for j in range(6, len(content)):
+    if match("^-{5}endmessage-{5}$", content[j]):
+        break
+    else:
+        if 
+        counter += 1
+    print(content[j])
+if len(content)-6 <= counter:
+    spam()
 
 # #Checa inicio da mensagem
 # match = re.search(r"-{5}beginmessage-{5}", content[0])
