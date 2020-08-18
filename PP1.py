@@ -22,7 +22,7 @@ regexList = ["-{5}beginmessage-{5}", \
     "^(-{23})$"]
 
 
-if len(content) < 5:
+if len(content) < 6:
     spam() 
 for i in range(5):
     if not match(regexList[i], content[i]):
