@@ -18,14 +18,12 @@ regexList = ["-{5}beginmessage-{5}", \
     "^(19|20)\d\d\.(0[1-9]|1[012])\.(0[1-9]|[12][0-9]|3[01]) (?:([01]?\d|2[0-3]):([0-5]?\d):)?([0-5]?\d)$", \
     "^(-{23})$"]
 
-if match(regexList[0], content[0]):
-    print("begin message")
 
-# try:
-#     while True:
-#         def
-# except EOFError:
-#     pass
+for i in range(0, len(content)):
+    if match(regexList[i], content[i]):
+        print("aceito", i)
+    else:
+        break
     
 
 # #Checa inicio da mensagem
